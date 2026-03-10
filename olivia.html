@@ -2,143 +2,267 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
     <title>Olivia Rodrigo - Melodify</title>
+    <!-- Título de la pestaña del navegador -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport permite que la página se adapte correctamente a celulares y tablets -->
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Importa la fuente Poppins desde Google Fonts -->
+
     <link rel="stylesheet" href="css/style.css">
+    <!-- Conecta el archivo CSS donde está todo el diseño del sitio -->
 </head>
+
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
+
     <div class="logo">
         <span class="icono">🎵</span>
         Melo<span>dif</span>y
     </div>
 
     <div class="menu-container">
+
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <!-- Botón que abre o cierra el menú en pantallas pequeñas -->
 
         <div class="menu" id="menu">
+
             <a href="index.html">Inicio</a>
             <a href="artistas.html">Artistas</a>
             <a href="generos.html">Géneros</a>
             <a href="test.html">Test</a>
             <a href="top.html">Top Billboard</a>
+
         </div>
     </div>
+
 </header>
 
+
+<!-- ================= PERFIL DEL ARTISTA ================= -->
+
 <section class="perfil-artista">
+<!-- Sección principal que contiene toda la información del artista -->
+
 
     <!-- HEADER PERFIL -->
+
     <div class="perfil-header">
+
         <img src="img/olivia.jpg" alt="Olivia Rodrigo">
+        <!-- Imagen principal del artista -->
+
         <div class="perfil-info">
+
             <h1>Olivia Rodrigo</h1>
+
             <p>Pop • Estados Unidos</p>
-            <p><strong>Activa desde:</strong> 2019</p>
+
+            <p>
+            <strong>Activa desde:</strong> 2019
+            </p>
+            <!-- strong se usa para resaltar texto en negritas -->
+
         </div>
+
     </div>
 
-    <!-- BIOGRAFÍA -->
+
+    <!-- ================= BIOGRAFÍA ================= -->
+
     <div class="perfil-seccion">
+
         <h2>Biografía</h2>
+
         <p>
             Olivia Rodrigo es una cantante y compositora estadounidense que alcanzó fama mundial 
             con su sencillo "drivers license". Su estilo mezcla pop moderno, rock alternativo 
             y letras emocionales que conectan con millones de jóvenes.
         </p>
+
     </div>
 
-    <!-- ÁLBUMES -->
+
+    <!-- ================= ÁLBUMES ================= -->
+
     <div class="perfil-seccion">
+
         <h2>Álbumes</h2>
+
         <ul>
+
             <li><strong>SOUR</strong> (2021)</li>
             <li><strong>GUTS</strong> (2023)</li>
+
         </ul>
+
     </div>
 
-    <!-- RÉCORDS -->
+
+    <!-- ================= RÉCORDS ================= -->
+
     <div class="perfil-seccion">
+
         <h2>Récords</h2>
+
         <ul>
+
             <li>Debut más exitoso en streaming en 2021</li>
             <li>Múltiples canciones en el Top 10 del Billboard Hot 100</li>
             <li>Millones de reproducciones en su primera semana</li>
+
         </ul>
+
     </div>
 
-    <!-- PREMIOS -->
+
+    <!-- ================= PREMIOS ================= -->
+
     <div class="perfil-seccion">
+
         <h2>Premios</h2>
+
         <ul>
+
             <li>3 Premios Grammy</li>
             <li>Billboard Music Awards</li>
             <li>MTV Video Music Awards</li>
+
         </ul>
+
     </div>
 
-    <!-- REDES SOCIALES -->
+
+    <!-- ================= REDES SOCIALES ================= -->
+
     <div class="perfil-seccion">
+
         <h2>Redes Sociales</h2>
+
         <ul>
-            <li><a href="https://www.instagram.com/oliviarodrigo?igsh=OTdqdW40ZW01c2Yw">Instagram</a></li>
-            <li><a href="#">Twitter / X</a></li>
-            <li><a href="https://www.tiktok.com/@livbedumb?is_from_webapp=1&sender_device=pc">TikTok</a></li>
+
+            <li>
+                <a href="https://www.instagram.com/oliviarodrigo?igsh=OTdqdW40ZW01c2Yw">
+                Instagram
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                Twitter / X
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.tiktok.com/@livbedumb?is_from_webapp=1&sender_device=pc">
+                TikTok
+                </a>
+            </li>
+
         </ul>
+
     </div>
 
-    <!-- PLATAFORMAS MUSICALES -->
+
+    <!-- ================= PLATAFORMAS MUSICALES ================= -->
+
     <div class="perfil-seccion">
+
         <h2>Escuchar en</h2>
+
         <ul>
+
             <li><a href="https://open.spotify.com/intl-es/artist/1McMsnEElThX1knmY4oliG">Spotify</a></li>
+
             <li><a href="#">Apple Music</a></li>
+
             <li><a href="#">YouTube Music</a></li>
+
             <li><a href="#">Amazon Music</a></li>
+
         </ul>
+
     </div>
 
-    <!-- ARTISTAS RELACIONADOS -->
+
+    <!-- ================= ARTISTAS RELACIONADOS ================= -->
+
     <div class="perfil-seccion relacionados">
+
         <h2>Artistas Relacionados</h2>
 
         <div class="relacionados-grid">
+        <!-- Contenedor que agrupa las tarjetas de artistas similares -->
+
 
             <div class="relacionado-card">
-              <a href="taylor.html">
+
+                <a href="taylor.html">
+                <!-- Enlace a la página de otro artista -->
                 <img src="img/taylor.jpg" alt="Taylor Swift">
-                 </a> <p>Taylor Swift</p>
-              </div>
+                </a>
+
+                <p>Taylor Swift</p>
+
+            </div>
 
 
             <div class="relacionado-card">
+
                 <img src="img/billie.jpg" alt="Billie Eilish">
+
                 <p>Billie Eilish</p>
+
             </div>
 
+
             <div class="relacionado-card">
+
                 <img src="img/conangray.jpg" alt="Conan Gray">
+
                 <p>Conan Gray</p>
+
             </div>
+
 
         </div>
+
     </div>
 
 </section>
 
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
-    © 2026 Melodify | Portal Musical Educativo
+
+© 2026 Melodify | Portal Musical Educativo
+
 </footer>
 
+
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
+
 function toggleMenu() {
+
     var menu = document.getElementById("menu");
+    // Obtiene el menú por su id
+
     menu.style.display = menu.style.display === "block" ? "none" : "block";
+    // Operador ternario: si el menú está visible lo oculta, si está oculto lo muestra
+
 }
+
 </script>
 
 </body>
