@@ -1,151 +1,277 @@
 <!DOCTYPE html> <!-- Declara que el documento usa HTML5 -->
 <html lang="es"> <!-- Etiqueta raíz de todo el documento HTML. lang="es" indica que el idioma del sitio es español -->
-<head> <!-- Contiene metadatos del sitio (información para el navegador, no visible directamente) -->
-    <meta charset="UTF-8"> <!-- Permite usar caracteres especiales como á, é, í, ó, ú, ñ -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsive, es decir que se adapte a celulares y tablets -->
-    <title>Melodify - Portal Musical</title> <!-- El título que aparece en la pestaña del navegador -->
 
-    <!-- =========FUENTE MODERNA=========-->
-    <!-- link que conecta recursos externos. Aquí se importa la fuente Poppins desde Google Fonts -->
+<head> <!-- Contiene metadatos del sitio (información para el navegador, no visible directamente) -->
+    
+    <meta charset="UTF-8"> <!-- Permite usar caracteres especiales como á, é, í, ó, ú, ñ -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea responsive, es decir que se adapte a celulares y tablets -->
+
+    <title>Melodify - Portal Musical</title>
+    <!-- El título que aparece en la pestaña del navegador -->
+
+    <!-- Fuente moderna -->
+    <!-- link conecta recursos externos. Aquí se importa la fuente Poppins desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- =====CSS===== -->
-    <!-- link que también se usa para conectar el archivo CSS donde está el diseño de la página -->
+    <!-- CSS -->
+    <!-- link también se usa para conectar el archivo CSS donde está el diseño de la página -->
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
 
-    <!-- HEADER -->
+</head>
+
+<body> 
+<!-- body contiene TODO el contenido visible del sitio web -->
+
+    <!-- ================= HEADER ================= -->
+    <!-- header representa la parte superior de la página (logo y navegación) -->
+
   <header>
+
+    <!-- div es un contenedor genérico que sirve para agrupar elementos y organizarlos con CSS -->
     <div class="logo">
-        <span class="icono">🎵</span>
+
+        <!-- span es un contenedor en línea que permite aplicar estilos a una parte del texto -->
+        <span class="icono">🎵</span> <!-- Muestra un ícono musical -->
+
         Melo<span>dif</span>y
+        <!-- Aquí span permite aplicar un estilo diferente solo a "dif" -->
+
     </div>
 
+    <!-- Contenedor del menú -->
     <div class="menu-container">
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
+        <!-- button crea un botón interactivo -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <!-- onclick ejecuta la función de JavaScript llamada toggleMenu() -->
+
+        <!-- Menú de navegación -->
         <div class="menu" id="menu">
+
+            <!-- a significa anchor (enlace). Sirve para navegar a otras páginas -->
             <a href="index.html">Inicio</a>
             <a href="artistas.html">Artistas</a>
             <a href="generos.html">Géneros</a>
             <a href="test.html">Test</a>
             <a href="top.html">Top Billboard</a>
             <a href="formulario">REGISTRATE AQUI</a>
+
         </div>
     </div>
+
 </header>
 
-    <!-- HERO -->
+    <!-- ================= HERO ================= -->
+    <!-- section agrupa contenido relacionado dentro de la página -->
+
     <section class="hero">
+
+        <!-- h1 es el título principal de la página -->
         <h1>Descubre el Universo de la Música</h1>
+
+        <!-- p significa párrafo -->
         <p>Explora géneros, artistas, historia y tendencias actuales en un solo lugar.</p>
-        <a href="#tarjetas-navegacion" class="btn">Explorar ahora</a>
+
+        <!-- a también puede funcionar como botón cuando se estiliza con CSS -->
+        <a href="generos.html" class="btn">Explorar ahora</a>
+
     </section>
 
-    <!-- INTRODUCCIÓN -->
+    <!-- ================= INTRODUCCIÓN ================= -->
 
     <div class="seccion-texto">
+
+        <!-- h2 es un subtítulo de nivel 2 -->
         <h2>¿Qué es Melodify?</h2>
-        <p>Melodify es un portal informativo dedicado al mundo de la música. Su objetivo es brindar contenido cultural,
-            educativo y actualizado sobre la evolución musical, los géneros más influyentes, artistas destacados y tendencias actuales.
-            A través de un diseño moderno y organizado, Melodify busca acercar la música a todo tipo de público.</p>
+
+        <p>
+        Melodify es un portal informativo dedicado al mundo de la música. 
+        Su objetivo es brindar contenido cultural, educativo y actualizado 
+        sobre la evolución musical, los géneros más influyentes, artistas 
+        destacados y tendencias actuales.
+        </p>
+
     </div>
 </section>
+
+<!-- ================= ORIGEN Y EVOLUCIÓN ================= -->
 
 <section class="seccion-flex bg-secundario">
+
     <div class="seccion-imagen">
+
+        <!-- a puede usarse para abrir enlaces externos -->
         <a href="https://youtu.be/If_T1Q9u6FM?si=I16epxj6bs2-eaPE" target="_blank">
+        <!-- target="_blank" hace que el enlace se abra en otra pestaña -->
+
+            <!-- img muestra imágenes -->
             <img src="img/evo.jpg" alt="Video Historia">
+            <!-- src indica la ubicación de la imagen -->
+            <!-- alt describe la imagen (importante para accesibilidad) -->
+
         </a>
+
     </div>
+
     <div class="seccion-texto">
+
         <h2>Origen y Evolución de la Música</h2>
-        <p>La música existe desde tiempos prehistóricos como medio de expresión y comunicación.
-            Desde rituales antiguos hasta la era digital, ha evolucionado junto con la humanidad.
-            En la actualidad, el streaming ha revolucionado la forma en que consumimos música,
-            permitiendo acceso inmediato desde cualquier parte del mundo.</p>
+
+        <p>
+        La música existe desde tiempos prehistóricos como medio de expresión y comunicación.
+        </p>
+
     </div>
+
 </section>
 
-    <!-- IMPACTO -->
-    <section class="seccion-flex">
+<!-- ================= IMPACTO ================= -->
+
+<section class="seccion-flex">
+
     <div class="seccion-imagen">
-        <a href="https://youtu.be/Hhya9TskxKk?si=tigD6gJsxTcPHo0O" target="_blank">
+
+        <a href="AQUÍ_PEGA_TU_LINK_DE_YOUTUBE" target="_blank">
             <img src="img/impc.jpg" alt="Video Música">
         </a>
+
     </div>
+
     <div class="seccion-texto">
+
         <h2>Impacto Cultural y Tecnológico</h2>
-        <p>La música influye en movimientos sociales, identidad cultural y tendencias globales.
-            Ha pasado de formatos físicos como vinilos y CD a plataformas digitales modernas,
-            transformando la industria y el acceso a los contenidos musicales.</p>
+
+        <p>
+        La música influye en movimientos sociales, identidad cultural y tendencias globales.
+        </p>
+
     </div>
+
 </section>
 
+<!-- ================= DATOS INTERESANTES ================= -->
+
 <section class="seccion-flex bg-secundario">
+
     <div class="seccion-imagen">
-        <a href="https://vt.tiktok.com/ZSuhj9fHy/" target="_blank">
+        <a href="AQUÍ_PEGA_TU_LINK_DE_YOUTUBE" target="_blank">
             <img src="img/dats.jpg" alt="Video Historia">
         </a>
     </div>
+
     <div class="seccion-texto">
+
         <h2>Datos Interesantes</h2>
+
+        <!-- ul significa lista desordenada -->
         <ul>
+
+            <!-- li significa elemento de lista -->
             <li>El pop es uno de los géneros más escuchados globalmente.</li>
             <li>El consumo digital supera ampliamente al formato físico.</li>
             <li>Las redes sociales influyen en la popularidad de canciones.</li>
             <li>Los algoritmos personalizan recomendaciones musicales.</li>
-        </ul></p>
+
+        </ul>
+
     </div>
+
 </section>
 
+<!-- ================= TARJETAS ================= -->
 
-    <!-- TARJETAS DE NAVEGACIÓN -->
-    <section id="tarjetas-navegacion">
+<section>
+
         <h2>Explora Más</h2>
 
         <div class="grid">
+
+            <!-- card representa una tarjeta de contenido -->
+
             <div class="card">
-                <h3>Artistas</h3>
+
+                <h3>Artistas</h3> <!-- h3 es un subtítulo menor -->
+
                 <p>Descubre perfiles, biografías y discografías.</p>
+
                 <a href="artistas.html" class="btn">Ver artistas</a>
+
             </div>
 
             <div class="card">
+
                 <h3>Géneros</h3>
+
                 <p>Explora estilos musicales y su historia.</p>
+
                 <a href="generos.html" class="btn">Ver géneros</a>
+
             </div>
 
             <div class="card">
+
                 <h3>Test Musical</h3>
+
                 <p>Descubre tu estilo musical ideal.</p>
+
                 <a href="test.html" class="btn">Hacer test</a>
+
             </div>
 
             <div class="card">
-                <h3>Top Billboard</h3>
-                <p>Consulta las canciones y artistas más populares.</p>
-                <a href="top.html" class="btn">Ver ranking</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>    © 2026 Melodify | Portal Musical Educativo</p>
-    </footer>
+                <h3>Top Billboard</h3>
+
+                <p>Consulta las canciones y artistas más populares.</p>
+
+                <a href="top.html" class="btn">Ver ranking</a>
+
+            </div>
+
+        </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+<!-- footer representa la parte inferior de la página -->
+
+<p>© 2026 Melodify | Portal Musical Educativo</p>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
+
 function toggleMenu() {
+
+    // Función que sirve para mostrar u ocultar el menú cuando se presiona el botón
+
     var menu = document.getElementById("menu");
+    // document.getElementById busca un elemento HTML por su id
+
     if (menu.style.display === "block") {
+        // Si el menú está visible
+
         menu.style.display = "none";
+        // Cambia el estilo para ocultarlo
+
     } else {
+
         menu.style.display = "block";
+        // Cambia el estilo para mostrarlo
+
     }
+
 }
+
 </script>
-</body>
+
+</body> <!-- Fin del contenido visible -->
+
+</html> <!-- Fin del documento HTML --></body>
 </html>
