@@ -1,46 +1,28 @@
 <!DOCTYPE html> <!-- Declara que el documento usa HTML5 -->
 <html lang="es"> <!-- Etiqueta raíz de todo el documento HTML. lang="es" indica que el idioma del sitio es español -->
-
-<head> <!-- Contiene metadatos del sitio (información para el navegador, no visible directamente) -->
-    
+<head> <!-- Contiene metadatos del sitio (información para el navegador, no visible directamente) -->  
     <meta charset="UTF-8"> <!-- Permite usar caracteres especiales como á, é, í, ó, ú, ñ -->
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Hace que la página sea responsive, es decir que se adapte a celulares y tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsive, es decir que se adapte a celulares y tablets -->
 
-    <title>Melodify - Portal Musical</title>
-    <!-- El título que aparece en la pestaña del navegador -->
+    <title>Melodify - Portal Musical</title> <!-- El título que aparece en la pestaña del navegador -->
 
-    <!-- Fuente moderna -->
-    <!-- link conecta recursos externos. Aquí se importa la fuente Poppins desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- ===FUENTE MODERNA=== -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"> <!-- link conecta recursos externos. Aquí se importa la fuente Poppins desde Google Fonts -->
 
-    <!-- CSS -->
-    <!-- link también se usa para conectar el archivo CSS donde está el diseño de la página -->
-    <link rel="stylesheet" href="css/style.css">
-
+    <!-- =====CSS===== -->
+    <link rel="stylesheet" href="css/style.css"> <!-- link también se usa para conectar el archivo CSS donde está el diseño de la página -->
 </head>
 
-<body> 
-<!-- body contiene TODO el contenido visible del sitio web -->
+<body> <!-- body contiene TODO el contenido visible del sitio web -->
 
     <!-- ================= HEADER ================= -->
-    <!-- header representa la parte superior de la página (logo y navegación) -->
+    <header> <!-- header representa la parte superior de la página (logo y navegación) -->
+        <div class="logo"> <!-- div es un contenedor genérico que sirve para agrupar elementos y organizarlos con CSS, class logo define el tipode dato que empleamos-->
+        <span class="icono">🎵</span> <!-- Muestra un ícono musical --> <!-- span es un contenedor en línea que permite aplicar estilos a una parte del texto -->
+        Melo<span>dif</span>y <!-- Aquí span permite aplicar un estilo diferente solo a "dif" -->
+        </div>
 
-  <header>
-
-    <!-- div es un contenedor genérico que sirve para agrupar elementos y organizarlos con CSS -->
-    <div class="logo">
-
-        <!-- span es un contenedor en línea que permite aplicar estilos a una parte del texto -->
-        <span class="icono">🎵</span> <!-- Muestra un ícono musical -->
-
-        Melo<span>dif</span>y
-        <!-- Aquí span permite aplicar un estilo diferente solo a "dif" -->
-
-    </div>
-
-    <!-- Contenedor del menú -->
+    <!-- CONTENEDOR DEL MENU -->
     <div class="menu-container">
 
         <!-- button crea un botón interactivo -->
