@@ -2,17 +2,23 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Formulario - Melodify</title>
+    <title>Formulario - Melodify</title> <!-- Título específico de esta página -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que el formulario se vea bien en celulares -->
 
     <!-- Fuente -->
+    <!-- Se importa la tipografía Poppins desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
+    <!-- Conecta el archivo de estilos donde está el diseño del sitio -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+<!-- ================= HEADER (MISMO DEL SITIO) ================= -->
 
 <header>
     <div class="logo">
@@ -22,6 +28,7 @@
 
     <div class="menu-container">
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <!-- onclick ejecuta la función JS que muestra u oculta el menú -->
 
         <div class="menu" id="menu">
             <a href="index.html">Inicio</a>
@@ -33,54 +40,105 @@
     </div>
 </header>
 
+
+<!-- ================= SECCIÓN DEL FORMULARIO ================= -->
+
 <section class="form-section">
+    <!-- Contenedor que centra el formulario en la pantalla -->
+
     <div class="tarjeta-genero formulario-card">
+    <!-- Se reutiliza el estilo de tarjetas del sitio para que el formulario tenga diseño tipo card -->
+
         <img src="img/logo.png" alt="Contacto" class="img-formulario">
-        
+        <!-- Imagen decorativa del formulario -->
+
         <h2>Formulario de Contacto</h2>
         <p>Envíanos tus sugerencias musicales 🎶</p>
 
+        <!-- form es la etiqueta que crea un formulario interactivo -->
         <form onsubmit="enviarFormulario(event)">
+        <!-- onsubmit ejecuta la función enviarFormulario cuando se intenta enviar el formulario -->
+
             <label>Nombre</label>
+            <!-- label muestra el nombre del campo para el usuario -->
+
             <input type="text" required>
+            <!-- input crea un campo para escribir texto -->
+            <!-- type="text" indica que es texto normal -->
+            <!-- required obliga a llenarlo antes de enviar -->
 
             <label>Correo electrónico</label>
+
             <input type="email" required>
+            <!-- type="email" valida que el texto tenga formato de correo -->
 
             <label>Género favorito</label>
+
+            <!-- select crea un menú desplegable -->
             <select required>
+
+                <!-- option representa cada opción del menú -->
                 <option value="">Selecciona uno</option>
+                <!-- value="" evita que esta opción sea válida al enviar -->
+
                 <option>Pop</option>
                 <option>Rock</option>
                 <option>Reguetón</option>
                 <option>R&B</option>
                 <option>Electrónica</option>
+
             </select>
 
             <label>Sugerencias</label>
-            <textarea rows="3" required></textarea>
 
+            <!-- textarea crea un campo de texto largo -->
+            <textarea rows="3" required></textarea>
+            <!-- rows define la altura inicial del cuadro de texto -->
+
+            <!-- button crea un botón que envía el formulario -->
             <button type="submit" class="btn">Enviar</button>
+            <!-- type="submit" indica que el botón enviará el formulario -->
+
         </form>
     </div>
 </section>
 
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
     © 2026 Melodify | Portal Musical Educativo
 </footer>
 
+
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
+
 function toggleMenu() {
+
     var menu = document.getElementById("menu");
+    // Obtiene el menú por su id
+
     menu.style.display = menu.style.display === "block" ? "none" : "block";
+    // Operador ternario:
+    // Si el menú está visible (block) lo oculta (none)
+    // Si está oculto lo muestra
 }
 
+
 function enviarFormulario(event) {
+
     event.preventDefault();
+    // Evita que el formulario recargue la página automáticamente
+
     alert("Formulario enviado correctamente ");
+    // alert muestra una ventana emergente con un mensaje al usuario
+
     window.location.href = "index.html";
+    // Redirige al usuario a la página principal después de enviar el formulario
 }
+
 </script>
 
 </body>
