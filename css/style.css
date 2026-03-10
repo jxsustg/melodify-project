@@ -1,115 +1,365 @@
-/* RESET */
+/* ================= RESET ================= */
+/* El reset elimina estilos por defecto del navegador */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin:0; /* Quita los márgenes predeterminados */
+    padding:0; /* Quita los espacios internos predeterminados */
+    box-sizing:border-box; /* Hace que el tamaño incluya padding y borde para evitar desbordes */
 }
 
-/* VARIABLES */
+
+/* ================= VARIABLES ================= */
+/* :root permite crear variables CSS reutilizables en todo el sitio */
+
 :root{
-    --fondo:#121212;
-    --secundario:#0D1B2A;
-    --azul:#1E90FF;
-    --azul-hover:#187bcd;
-    --texto:#FFFFFF;
-    --texto-sec:#B3B3B3;
+    --fondo:#121212; /* Color principal de fondo del sitio */
+    --secundario:#0D1B2A; /* Color secundario usado en secciones y tarjetas */
+    --azul:#1E90FF; /* Color azul principal del diseño */
+    --azul-hover:#187bcd; /* Azul más oscuro usado cuando el mouse pasa encima */
+    --texto:#FFFFFF; /* Color principal del texto */
+    --texto-sec:#B3B3B3; /* Color de texto secundario o menos importante */
 }
 
-/* BODY */
+
+/* ================= BODY ================= */
+/* body controla el estilo general de toda la página */
+
 body{
-    font-family:'Poppins', sans-serif;
-    background:var(--fondo);
-    color:var(--texto);
-    line-height:1.6;
+    font-family:'Poppins', sans-serif; /* Tipografía del sitio */
+    background:var(--fondo); /* Fondo usando la variable creada */
+    color:var(--texto); /* Color del texto principal */
+    line-height:1.6; /* Espaciado entre líneas para mejor lectura */
 }
 
-/* HEADER */
+
+/* ================= HEADER ================= */
+/* Estilos de la parte superior de la página */
+
 header{
-    background:var(--secundario);
-    padding:20px 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    background:var(--secundario); /* Color de fondo del header */
+    padding:20px 50px; /* Espacio interno arriba/abajo y lados */
+    display:flex; /* Activa flexbox para organizar elementos */
+    justify-content:space-between; /* Separa logo y menú */
+    align-items:center; /* Centra verticalmente los elementos */
 }
 
-/* LOGO */
+
+/* ================= LOGO ================= */
+
 .logo{
-    display:flex;
-    align-items:center;
-    font-size:26px;
-    font-weight:700;
+    display:flex; /* Permite alinear icono y texto */
+    align-items:center; /* Centra verticalmente */
+    font-size:26px; /* Tamaño del texto */
+    font-weight:700; /* Grosor del texto (negrita) */
 }
 
 .logo span{
-    color:var(--azul);
+    color:var(--azul); /* Colorea parte del logo */
 }
 
 .icono{
-    background:var(--azul);
-    border-radius:50%;
-    padding:8px;
-    margin-right:10px;
+    background:var(--azul); /* Fondo azul del icono */
+    border-radius:50%; /* Hace el fondo circular */
+    padding:8px; /* Espacio dentro del icono */
+    margin-right:10px; /* Separación entre icono y texto */
 }
 
-/* MENU */
+
+/* ================= MENU ================= */
+
 .menu-container{
-    position:relative;
+    position:relative; /* Permite posicionar el menú desplegable respecto a este contenedor */
 }
 
 .menu-btn{
-    background:var(--azul);
-    color:white;
-    border:none;
-    font-size:24px;
-    padding:8px 12px;
-    border-radius:8px;
-    cursor:pointer;
+    background:var(--azul); /* Color del botón */
+    color:white; /* Color del icono */
+    border:none; /* Quita borde del botón */
+    font-size:24px; /* Tamaño del icono ☰ */
+    padding:8px 12px; /* Espacio interno */
+    border-radius:8px; /* Bordes redondeados */
+    cursor:pointer; /* Cambia el cursor a mano al pasar encima */
 }
 
 .menu{
-    display:none;
-    position:absolute;
-    right:0;
-    top:50px;
-    background:var(--secundario);
-    width:170px;
-    padding:10px;
-    border-radius:10px;
+    display:none; /* Oculta el menú inicialmente */
+    position:absolute; /* Permite posicionarlo respecto al contenedor */
+    right:0; /* Lo alinea al lado derecho */
+    top:50px; /* Lo coloca debajo del botón */
+    background:var(--secundario); /* Fondo del menú */
+    width:170px; /* Ancho del menú */
+    padding:10px; /* Espacio interno */
+    border-radius:10px; /* Bordes redondeados */
 }
 
 .menu a{
-    display:block;
-    color:white;
-    text-decoration:none;
-    padding:8px;
-    border-radius:6px;
+    display:block; /* Cada enlace ocupa toda la línea */
+    color:white; /* Color del texto */
+    text-decoration:none; /* Quita el subrayado */
+    padding:8px; /* Espacio interno */
+    border-radius:6px; /* Bordes redondeados */
 }
 
 .menu a:hover{
-    background:var(--azul);
+    background:var(--azul); /* Cambia color al pasar el mouse */
 }
 
-/* HERO */
+
+/* ================= HERO ================= */
+/* Sección principal de bienvenida */
+
 .hero{
-    text-align:center;
-    padding:80px 20px;
-    background:linear-gradient(to right,#0D1B2A,#121212);
+    text-align:center; /* Centra el texto */
+    padding:80px 20px; /* Espacio interno grande */
+    background:linear-gradient(to right,#0D1B2A,#121212); 
+    /* Degradado de color de izquierda a derecha */
 }
 
-/* SECCIONES FLEX */
+
+/* ================= SECCIONES FLEX ================= */
+/* Estructura para secciones con imagen y texto */
+
 .seccion-flex{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:60px 50px;
-    gap:40px;
+    display:flex; /* Organiza contenido en fila */
+    justify-content:space-between; /* Separa elementos */
+    align-items:center; /* Centra verticalmente */
+    padding:60px 50px; /* Espacio interno */
+    gap:40px; /* Espacio entre imagen y texto */
 }
 
 .seccion-texto{
-    flex:1;
+    flex:1; /* Permite que el texto ocupe espacio proporcional */
 }
 
-/* IMAGEN DERECHA */
+
+/* ================= IMAGEN DERECHA ================= */
+
+.seccion-flex {
+    display: flex; /* Layout flexible */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centrado vertical */
+    padding: 60px 50px; /* Espaciado interno */
+    gap: 50px; /* Espacio entre imagen y texto */
+}
+
+/* contenedor de imagen */
+.seccion-imagen {
+    flex: 1; /* Ocupa mismo espacio que el texto */
+    max-width: 500px; /* Limita el ancho máximo */
+}
+
+.seccion-imagen img {
+    width: 100%; /* Imagen ocupa todo el contenedor */
+    height: 300px; /* Altura fija */
+    object-fit: cover; /* Recorta imagen sin deformarla */
+    border-radius: 20px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    /* Animación suave */
+    display: block; /* Evita espacios extra */
+}
+
+/* Efecto hover para indicar que es clicable */
+.seccion-imagen img:hover {
+    transform: scale(1.03); /* Agranda ligeramente */
+    box-shadow: 0 0 20px var(--azul); /* Brillo azul */
+    cursor: pointer; /* Cursor de mano */
+}
+
+.seccion-texto {
+    flex: 1; /* Texto ocupa espacio flexible */
+}
+
+
+/* ================= BACKGROUND SECUNDARIO ================= */
+
+.bg-secundario{
+    background:var(--secundario); /* Fondo oscuro para diferenciar secciones */
+}
+
+
+/* ================= GRID CARDS ================= */
+/* Sistema de tarjetas adaptable */
+
+section {
+    padding: 60px 50px; /* Espacio alrededor de las secciones */
+}
+
+.grid {
+    display: grid; /* Activa CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Crea columnas automáticas adaptables */
+    gap: 30px; /* Espacio entre tarjetas */
+    margin-top: 30px;
+}
+
+
+/* ================= CARD ================= */
+
+.card{
+    background:var(--secundario); /* Fondo de la tarjeta */
+    padding:25px; /* Espacio interno */
+    border-radius:12px; /* Bordes redondeados */
+    transition:.3s; /* Animación suave */
+}
+
+.card:hover{
+    transform:translateY(-6px); /* La tarjeta se levanta al pasar el mouse */
+}
+
+
+/* ================= BOTONES ================= */
+
+.btn{
+    background:var(--azul); /* Color azul */
+    color:white; /* Texto blanco */
+    padding:12px 25px; /* Espacio interno */
+    border-radius:8px; /* Bordes redondeados */
+    text-decoration:none; /* Quita subrayado */
+    display:inline-block; /* Permite padding como botón */
+    transition:.3s; /* Animación suave */
+    border:none; /* Sin borde */
+    cursor:pointer; /* Cursor de mano */
+}
+
+.btn:hover{
+    background:var(--azul-hover); /* Cambia a azul oscuro */
+}
+
+
+/* ================= FORMULARIO ================= */
+
+.formulario{
+    width:90%; /* Ocupa 90% del ancho */
+    max-width:500px; /* Pero máximo 500px */
+    margin:60px auto; /* Centra el formulario */
+    padding:30px; /* Espacio interno */
+    background:var(--secundario); /* Fondo oscuro */
+    border-radius:20px; /* Bordes redondeados */
+    box-shadow:0 0 20px rgba(0,0,0,0.3); /* Sombra */
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea{
+    padding:12px;
+    border-radius:8px;
+    border:none;
+    background:var(--secundario);
+    color:white;
+    margin-top:8px;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus{
+    outline:2px solid var(--azul); /* Resalta campo seleccionado */
+}
+
+
+/* ================= PERFIL ARTISTA ================= */
+
+.perfil-artista{
+    padding:60px; /* Espacio alrededor */
+}
+
+.perfil-header{
+    display:flex; /* Organización horizontal */
+    gap:30px; /* Espacio entre imagen y texto */
+    align-items:center; /* Centrado vertical */
+}
+
+.perfil-header img{
+    width:180px;
+    height:180px;
+    object-fit:cover; /* Recorte proporcional */
+    border-radius:20px;
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
+}
+
+.perfil-seccion{
+    margin-top:40px;
+}
+
+
+/* ================= TABLA BILLBOARD ================= */
+
+.tabla-billboard{
+    width:90%;
+    margin:30px auto;
+    border-collapse:collapse; /* Une bordes de la tabla */
+    background:var(--secundario);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.tabla-billboard th{
+    background:var(--azul); /* Encabezado azul */
+    padding:12px;
+}
+
+.tabla-billboard td{
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid #222;
+}
+
+/* Resaltar el primer lugar */
+.tabla-billboard tbody tr:first-child {
+    background: rgba(30, 144, 255, 0.2);
+    font-weight: bold;
+    color: var(--azul);
+}
+
+/* Efecto hover en filas */
+.tabla-billboard tbody tr:hover {
+    background: #1a2a3a;
+    transition: 0.3s;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center; /* Centra texto */
+    padding:25px;
+    background:var(--secundario);
+    margin-top:50px;
+    color:var(--texto-sec);
+}
+
+
+/* ================= RESPONSIVE ================= */
+/* Ajustes para celulares */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:right; /* Cambia orientación */
+        gap:15px;
+    }
+
+    .seccion-flex{
+        flex-direction:column; /* Elementos en columna */
+        text-align:center;
+    }
+
+    .seccion-imagen{
+        width:100%;
+    }
+
+    .perfil-header{
+        flex-direction:column;
+        text-align:center;
+    }     
+}
+
+
+/* ================= SCROLL SUAVE ================= */
+
+html {
+  scroll-behavior: smooth; 
+  /* Hace que al navegar con enlaces la página se desplace suavemente */
+        }/* IMAGEN DERECHA */
 
 .seccion-flex {
     display: flex;
